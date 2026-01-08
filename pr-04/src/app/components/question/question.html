@@ -1,1 +1,12 @@
-<p>question works!</p>
+<div class="question">
+  <h3>{{ question.text }}</h3>
+
+  <ul>
+    <li *ngFor="let option of question.options; let i = index"
+        (click)="selectAnswer(i)"
+        [class.selected]="selectedIndex === i"
+        [class.correct]="showCorrect && i === question.correctIndex">
+      {{ option }}
+    </li>
+  </ul>
+</div>

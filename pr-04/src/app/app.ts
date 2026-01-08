@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { QuizComponent } from './components/quiz/quiz';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [QuizComponent],
+  template: `<app-quiz></app-quiz>`
 })
-export class App {
-  protected readonly title = signal('pr-04');
-}
+export class App {}
