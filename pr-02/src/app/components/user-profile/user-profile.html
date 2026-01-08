@@ -1,0 +1,21 @@
+<div class="card">
+  <h2 class="card__title">Профіль користувача</h2>
+
+  <div class="row"><strong>ID:</strong> {{ user.id }}</div>
+  <div class="row"><strong>Імʼя:</strong> {{ user.name }}</div>
+  <div class="row"><strong>Статус:</strong> {{ user.status }}</div>
+
+  <div class="section">
+    <h3>Адреса</h3>
+    <p>{{ user.address.city }}, {{ user.address.street }}</p>
+  </div>
+
+  <div class="section">
+    <h3>Хобі ({{ getHobbiesCount() }})</h3>
+    <ul>
+      <li *ngFor="let hobby of user.hobbies">
+        {{ hobby }}
+      </li>
+    </ul>
+  </div>
+</div>
