@@ -1,0 +1,45 @@
+.sb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sb__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+}
+
+.sb__title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sb__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sb__link {
+  text-decoration: none;
+  color: #e7eefc;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+  .sb__link:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+.sb__text {
+  margin: 0;
+  color: rgba(231, 238, 252, 0.75);
+  line-height: 1.4;
+  font-size: 13px;
+}

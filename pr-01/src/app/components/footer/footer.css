@@ -1,0 +1,19 @@
+.ftr {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 16px;
+}
+
+.ftr__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  color: rgba(231, 238, 252, 0.70);
+  font-size: 13px;
+}
+
+.ftr__dot {
+  opacity: 0.5;
+}

@@ -1,0 +1,40 @@
+.mc__h1 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.mc__p {
+  margin: 0 0 16px;
+  color: rgba(231, 238, 252, 0.80);
+  line-height: 1.5;
+}
+
+.mc__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mc__tile {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.mc__tileTitle {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.mc__tileText {
+  color: rgba(231, 238, 252, 0.75);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .mc__grid {
+    grid-template-columns: 1fr;
+  }
+}
