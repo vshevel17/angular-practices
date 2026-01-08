@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductTableComponent } from './components/product-table/product-table';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [ProductTableComponent],
+  template: `<app-product-table></app-product-table>`
 })
-export class App {
-  protected readonly title = signal('pr-03');
-}
+export class App {}
