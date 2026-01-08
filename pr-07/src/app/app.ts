@@ -1,11 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BehaviorSubject, switchMap } from 'rxjs';
+import { ApiService } from './services/api';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './app.html'
 })
 export class App {
-  protected readonly title = signal('pr-07');
+
+  users$ = this.apiService.getUsers();
+
+  selectedUserId$ = new BehaviorSubject<number>(1);
+
+  posts$ = this.selectedUserId$.pipe(
+    switchMap(userId => this.apiService.getPostsByUserId(userId))
+  );
+
+  constructor(private apiService: ApiService) {}
+
+  selectUser(id: number) {
+    this.selectedUserId$.next(id);
+  }
 }
