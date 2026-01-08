@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ConfigurableHighlightDirective } from './directives/configurable-highlight';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true,
+  imports: [ConfigurableHighlightDirective],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('pr-05');
-}
+export class App {}
